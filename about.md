@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+프론트엔드에 관심있는 대학생 개발자입니다.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[깃허브 둘러보기](https://www.github.com/juice-han)
+
+[이메일 보내기](mailto:iiiamst16@gmail.com)
