@@ -321,7 +321,7 @@ pre.highlight {
   background-color: #f4f4f4;
   margin: 20px 0 20px 0;
   overflow: auto;
-  padding : 7px 7px 7px 10px;
+  padding: 7px 7px 7px 15px;
 }
 
 code {
