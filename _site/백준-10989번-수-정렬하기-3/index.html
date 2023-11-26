@@ -96,20 +96,20 @@
       <li>
         <p><strong>반복문을 활용한 정렬 알고리즘 직접 설계</strong></p>
 
-        <pre><code class="language-Python"> n = int(input())
- nl = [int(input())]
- for i in range(n):
-     c = 0 # 인덱스
-     m = int(input())  # 수를 입력받고
-     while c &lt; len(nl) and nl[c] &lt; m : # 크기를 비교하며 올바른 오름차순 인덱스 찾기
-         c += 1
-     if c == len(nl): # 만약 인덱스가 배열의 길이와 같다면 가장 큰 수라는 뜻
-         nl.append(m) # 배열 마지막에 추가
-     else:
-         nl.insert(c,m) # 그게 아니라면 찾아낸 인덱스에 값 insert
- for a in nl:
-     print(a)   
-</code></pre>
+        <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">n</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span>
+ <span class="n">nl</span> <span class="o">=</span> <span class="p">[</span><span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())]</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 인덱스
+</span>     <span class="n">m</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span>  <span class="c1"># 수를 입력받고
+</span>     <span class="k">while</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">nl</span><span class="p">)</span> <span class="ow">and</span> <span class="n">nl</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="p">:</span> <span class="c1"># 크기를 비교하며 올바른 오름차순 인덱스 찾기
+</span>         <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
+     <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="nf">len</span><span class="p">(</span><span class="n">nl</span><span class="p">):</span> <span class="c1"># 만약 인덱스가 배열의 길이와 같다면 가장 큰 수라는 뜻
+</span>         <span class="n">nl</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="c1"># 배열 마지막에 추가
+</span>     <span class="k">else</span><span class="p">:</span>
+         <span class="n">nl</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">m</span><span class="p">)</span> <span class="c1"># 그게 아니라면 찾아낸 인덱스에 값 insert
+</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">nl</span><span class="p">:</span>
+     <span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   
+</code></pre></div>        </div>
 
         <p>코드 설명 : 입력받은 수의 인덱스가 while문을 돌면서 1씩 상승하고 오름차순으로 올바른 위치에 인덱스가 오게된다면 그곳에 수를 insert하는 방식</p>
 
@@ -122,15 +122,15 @@
 
         <p>맨 처음에 길이 10000짜리 리스트를 만들어서 입력받은 수에 해당하는 인덱스의 값을 1씩 증가시켰다.</p>
 
-        <pre><code class="language-Python"> n = int(input())
- nl = [0 for _ in range(10000)] # 길이 10000짜리 0으로 된 list 생성
- # 인덱스 값 = 해당 수 - 1 관계
- for i in range(n):
-     nl[int(input())-1] += 1
- for i in range(10000): 
-     for j in range(nl[i]):
-         print(i+1)
-</code></pre>
+        <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">n</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span>
+ <span class="n">nl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)]</span> <span class="c1"># 길이 10000짜리 0으로 된 list 생성
+</span> <span class="c1"># 인덱스 값 = 해당 수 - 1 관계
+</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="n">nl</span><span class="p">[</span><span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span> 
+     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">nl</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+         <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>        </div>
 
         <p>해당 값을 프린트하는 과정도 줄이려고 for문을 활용해서 리스트의 값과 인덱스를 활용했다.</p>
 
@@ -139,14 +139,14 @@
       <li>
         <p><strong>print에 ‘\n’을 넣어서 출력 시간 단축시키기</strong></p>
 
-        <pre><code class="language-Python"> n = int(input())
- nl = [0 for _ in range(10000)]
- for i in range(n):
-     nl[int(input())] += 1
- for i in range(10000):
-     if nl[i] &gt; 0:
-         print(f'{i+1}\n'* nl[i],end='') # f-string을 활용한 \n끼워 넣은 문자열 생성
-</code></pre>
+        <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">n</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span>
+ <span class="n">nl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)]</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="n">nl</span><span class="p">[</span><span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())]</span> <span class="o">+=</span> <span class="mi">1</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+     <span class="k">if</span> <span class="n">nl</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+         <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="se">\n</span><span class="sh">'</span><span class="o">*</span> <span class="n">nl</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="sh">''</span><span class="p">)</span> <span class="c1"># f-string을 활용한 \n끼워 넣은 문자열 생성
+</span></code></pre></div>        </div>
 
         <p>이렇게하면 print함수의 호출을 줄일 수 있어서 정답을 기대했지만 역시나 시간 초과 오류가 나왔다.</p>
 
@@ -159,17 +159,17 @@
       <li>
         <p><code class="language-plaintext highlighter-rouge">sys.stdin.readline()</code><strong>를 사용해서 수 입력받기</strong></p>
 
-        <pre><code class="language-Python"> import sys
- n = int(input())
- nl = [0 for _ in range(10000)]
- for i in range(n):
-     nl[int(sys.stdin.readline().strip())-1] += 1
- s = ""
- for i in range(1,10001):
-     if nl[i] != 0:
-         s += (str(i)+'\n')*nl[i-1]
- print(s,end='')
-</code></pre>
+        <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">import</span> <span class="n">sys</span>
+ <span class="n">n</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span>
+ <span class="n">nl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)]</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="n">nl</span><span class="p">[</span><span class="nf">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="nf">readline</span><span class="p">().</span><span class="nf">strip</span><span class="p">())</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+ <span class="n">s</span> <span class="o">=</span> <span class="sh">""</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10001</span><span class="p">):</span>
+     <span class="k">if</span> <span class="n">nl</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+         <span class="n">s</span> <span class="o">+=</span> <span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="sh">'</span><span class="se">\n</span><span class="sh">'</span><span class="p">)</span><span class="o">*</span><span class="n">nl</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+ <span class="nf">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="sh">''</span><span class="p">)</span>
+</code></pre></div>        </div>
 
         <p><code class="language-plaintext highlighter-rouge">sys.stdin.readline()</code>를 사용하니 시간초과 오류가 발생하지 않았다!</p>
 
@@ -203,15 +203,15 @@
 
         <p><a href="https://velog.io/@sj9802/print문-대신-sys.stdout.write-을-쓰자">sys.stdout.write()함수 사용 방법 링크</a></p>
 
-        <pre><code class="language-Python"> import sys
- n = int(input())
- nl = [0 for _ in range(10000)]
- for i in range(n):
-     nl[int(sys.stdin.readline().strip())-1] += 1
- for i in range(10000):
-     for a in range(nl[i]):
-         sys.stdout.write(str(i+1) + '\n')
-</code></pre>
+        <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">import</span> <span class="n">sys</span>
+ <span class="n">n</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span>
+ <span class="n">nl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)]</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+     <span class="n">nl</span><span class="p">[</span><span class="nf">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="nf">readline</span><span class="p">().</span><span class="nf">strip</span><span class="p">())</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+ <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+     <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">nl</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+         <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="sh">'</span><span class="se">\n</span><span class="sh">'</span><span class="p">)</span>
+</code></pre></div>        </div>
 
         <p>결과는 “맞았습니다!!”</p>
 
