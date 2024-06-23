@@ -8,7 +8,7 @@
 
 - type: linkedin
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-  url: 'www.linkedin.com/in/주한-박-01a850311'
+  url: 'https://www.linkedin.com/in/주한-박-01a850311'
 
 - type: email
   icon: "fas fa-envelope"
